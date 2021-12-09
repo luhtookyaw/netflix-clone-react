@@ -1,0 +1,130 @@
+.row {
+    color: white;
+    margin-left: 23px;
+    padding-top: 40px;
+}
+
+.row-title {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.row-posters {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 10px;
+    margin-left: 18px;
+}
+
+.row-posters::-webkit-scrollbar {
+    display: none;
+}
+
+.row-poster {
+    object-fit: contain;
+    width: 100%;
+    max-height: 100px;
+    margin-right: 10px;
+    transition: transform 450ms;
+}
+
+.row-poster:hover {
+    transform: scale(1.08);
+    opacity: 1;
+}
+
+.row-posterLarge {
+    max-height: 250px;
+}
+
+.row-posterLarge:hover {
+    transform: scale(1.09); 
+}
+
+/* Pop-up Trailer Card */
+.popup-card {
+    background-color: rgb(27, 26, 26);
+    height: 580px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.close-button {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: rgba(214, 212, 208, .75);
+    transition: color 300ms;
+}
+
+.close-button:hover {
+    color: rgb(87, 81, 81);
+}
+
+.trailer {
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    object-fit: contain;
+    width: 780px;
+    max-height: 450px;
+}
+
+.movie-overview {
+    display: grid;
+    color: white;
+    font-weight: 430;
+    font-size: .95rem;
+    letter-spacing: 1px;
+    max-width: 570px;
+    margin-top: 20px;
+    margin-left: 47px;
+    line-height: 25px;
+    grid-template-columns: auto auto;
+    grid-gap: 80px;
+}
+
+.label {
+    font-size: .93rem;
+    color:rgb(104, 100, 100);
+}
+
+@media only screen and (max-width: 800px) {
+    .popup-card {
+        height: 380px;
+    }
+    .trailer {
+        width: 400px;
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
+    }
+    .movie-overview {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .row {
+        padding-top: 10px;
+    }
+    .row-title {
+        font-size: 15px;
+    }
+    .row-poster {
+        max-height: 60px;
+    }
+    .row-posterLarge {
+        max-height: 160px;
+    }
+    .row-title.large {
+        padding-top: 40px;
+    }
+
+    .popup-card {
+        height: 200px;
+    }
+    .trailer {
+        width: 310px;
+    }
+}
